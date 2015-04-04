@@ -1,0 +1,30 @@
+{
+  "name": "ember-cli-java-properties-to-object",
+  "version": "0.0.1",
+  "description": "Convert java properties files to POJO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willemdewit/ember-cli-java-properties-to-object.git"
+  },
+  "keywords": [
+    "ember-addon",
+    "java",
+    "properties"
+  ],
+  "author": "Willem de Wit <willem_wit@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "broccoli-merge-trees": "^0.2.1",
+    "java.properties.js": "0.0.2",
+    "ember-cli-version-checker": "^1.0.1",
+    "lodash-node": "^2.4.1"
+  },
+  "bugs": {
+    "url": "https://github.com/willemdewit/ember-cli-java-properties-to-object/issues"
+  },
+  "homepage": "https://github.com/willemdewit/ember-cli-java-properties-to-object"
+}
