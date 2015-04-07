@@ -21,7 +21,8 @@
     "broccoli-merge-trees": "^0.2.1",
     "java.properties.js": "0.0.2",
     "ember-cli-version-checker": "^1.0.1",
-    "lodash-node": "^2.4.1"
+    "lodash": "^2.4.1",
+    "broccoli-java-properties-to-object": "0.0.2"
   },
   "bugs": {
     "url": "https://github.com/willemdewit/ember-cli-java-properties-to-object/issues"
