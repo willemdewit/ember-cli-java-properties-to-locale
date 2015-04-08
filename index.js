@@ -15,16 +15,9 @@ module.exports = {
     var brocfileConfig = {};
     var propsOptions = defaults(this.project.config(process.env.EMBER_ENV).propsOptions || {},
       brocfileConfig, {
-        blueprints: true
       });
 
     return propsOptions;
-  },
-
-  blueprintsPath: function() {
-    if (this.getConfig().blueprints) {
-      return path.join(__dirname, 'blueprints');
-    }
   },
 
   setupPreprocessorRegistry: function(type, registry) {
@@ -35,6 +28,7 @@ module.exports = {
 
   included: function(app) {
     this.app = app;
+    this._super.included.apply(this, arguments);
 
     if (this.shouldSetupRegistryInIncluded()) {
       this.setupPreprocessorRegistry('parent', app.registry);
