@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-java-properties-to-object",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Convert java properties files to POJO",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "broccoli-merge-trees": "^0.2.1",
     "ember-cli-version-checker": "^1.0.1",
     "lodash": "^2.4.1",
-    "broccoli-java-properties-to-object": "0.0.3"
+    "broccoli-java-properties-to-object": "0.0.4"
   },
   "bugs": {
     "url": "https://github.com/willemdewit/ember-cli-java-properties-to-object/issues"
