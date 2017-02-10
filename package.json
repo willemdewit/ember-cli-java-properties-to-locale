@@ -18,7 +18,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Willem de Wit",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
@@ -44,15 +44,23 @@
     "loader.js": "^4.0.1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "java",
+    "properties"
   ],
   "dependencies": {
+    "broccoli-merge-trees": "^0.2.1",
     "ember-cli-babel": "^5.1.6",
     "ember-cli-version-checker": "^1.0.1",
-    "lodash": "^2.4.1"
+    "lodash": "^2.4.1",
+    "broccoli-java-properties-to-object": "0.1.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "before": "ember-cli-babel"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/willemdewit/ember-cli-java-properties-to-object/issues"
+  },
+  "homepage": "https://github.com/willemdewit/ember-cli-java-properties-to-object"
 }
