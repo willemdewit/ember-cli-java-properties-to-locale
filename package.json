@@ -44,8 +44,7 @@
     "loader.js": "^4.0.1"
   },
   "keywords": [
-    "ember-addon",
-    "before": "ember-cli-babel"
+    "ember-addon"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.6",
@@ -53,6 +52,7 @@
     "lodash": "^2.4.1"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "before": "ember-cli-babel"
   }
 }
