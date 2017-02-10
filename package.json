@@ -2,37 +2,57 @@
   "name": "ember-cli-java-properties-to-object",
   "version": "0.2.0",
   "description": "Convert java properties files to POJO",
-  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "ember build",
+    "start": "ember server",
+    "test": "ember try:each"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/willemdewit/ember-cli-java-properties-to-object.git"
   },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "broccoli-asset-rev": "^2.4.2",
+    "ember-ajax": "^2.0.1",
+    "ember-cli": "2.7.0",
+    "ember-cli-app-version": "^1.0.0",
+    "ember-cli-dependency-checker": "^1.2.0",
+    "ember-cli-htmlbars": "^1.0.3",
+    "ember-cli-htmlbars-inline-precompile": "^0.3.1",
+    "ember-cli-inject-live-reload": "^1.4.0",
+    "ember-cli-jshint": "^1.0.0",
+    "ember-cli-qunit": "^2.0.0",
+    "ember-cli-release": "^0.2.9",
+    "ember-cli-sri": "^2.1.0",
+    "ember-cli-test-loader": "^1.1.0",
+    "ember-cli-uglify": "^1.2.0",
+    "ember-data": "^2.7.0",
+    "ember-disable-prototype-extensions": "^1.1.0",
+    "ember-export-application-global": "^1.0.5",
+    "ember-load-initializers": "^0.5.1",
+    "ember-resolver": "^2.0.3",
+    "ember-welcome-page": "^1.0.1",
+    "loader.js": "^4.0.1"
+  },
   "keywords": [
     "ember-addon",
-    "java",
-    "properties"
-  ],
-  "ember-addon": {
-    "main": "index.js",
     "before": "ember-cli-babel"
-  },
-  "author": "Willem de Wit <willem_wit@hotmail.com>",
-  "license": "MIT",
+  ],
   "dependencies": {
-    "broccoli-merge-trees": "^0.2.1",
+    "ember-cli-babel": "^5.1.6",
     "ember-cli-version-checker": "^1.0.1",
-    "lodash": "^2.4.1",
-    "broccoli-java-properties-to-object": "0.1.0"
+    "lodash": "^2.4.1"
   },
-  "bugs": {
-    "url": "https://github.com/willemdewit/ember-cli-java-properties-to-object/issues"
-  },
-  "homepage": "https://github.com/willemdewit/ember-cli-java-properties-to-object",
-  "devDependencies": {
-    "ember-cli": "2.11.0",
-    "ember-cli-release": "1.0.0-beta.2"
+  "ember-addon": {
+    "configPath": "tests/dummy/config"
   }
 }
