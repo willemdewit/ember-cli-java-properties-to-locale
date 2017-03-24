@@ -2,7 +2,6 @@
 'use strict';
 
 var checker   = require('ember-cli-version-checker');
-
 var PropertiesPreprocessor = require('broccoli-java-properties-to-object');
 
 module.exports = {
