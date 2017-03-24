@@ -1,29 +1,34 @@
-var path      = require('path');
-var checker   = require('ember-cli-version-checker');
-var defaults  = require('lodash').defaults;
+/* eslint-env node */
+'use strict';
 
-var PropertiesPreprocessor = require('./lib/properties-preprocessor');
+var checker   = require('ember-cli-version-checker');
+
+var PropertiesPreprocessor = require('broccoli-java-properties-to-object');
 
 module.exports = {
-  name: 'Ember CLI Properties Addon',
+  name: 'ember-cli-java-properties-to-object',
 
   shouldSetupRegistryInIncluded: function() {
     return !checker.isAbove(this, '0.2.0');
   },
 
-  getConfig: function() {
-    var brocfileConfig = {};
-    var propsOptions = defaults(this.project.config(process.env.EMBER_ENV).propsOptions || {},
-      brocfileConfig, {
-      });
-
-    return propsOptions;
+  getConfig: function(options) {
+    return Object.assign(options, this.project.config(process.env.EMBER_ENV).propsOptions);
   },
 
   setupPreprocessorRegistry: function(type, registry) {
-    var plugin = new PropertiesPreprocessor(this.getConfig());
-
-    registry.add('js', plugin);
+    var _this = this;
+    registry.add('js', {
+      name: 'ember-cli-java-properties-to-object',
+      ext: PropertiesPreprocessor.prototype.extensions,
+      toTree(tree, inputPath, outputPath) {
+        var options = {
+          srcDir: inputPath,
+          destDir: outputPath
+        };
+        return new PropertiesPreprocessor(tree, _this.getConfig(options));
+      }
+    });
   },
 
   included: function(app) {
